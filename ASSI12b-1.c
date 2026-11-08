@@ -1,7 +1,7 @@
 #include <stdio.h>
-enum weekdays
-{
-    MONDAY=1
+
+enum Day {
+    MONDAY = 1,
     TUESDAY,
     WEDNESDAY,
     THURSDAY,
@@ -9,35 +9,47 @@ enum weekdays
     SATURDAY,
     SUNDAY
 };
-int main()
+
+int main(void)
 {
-    int n;
-    enum weekdays choice;
-    scanf("%d",n);
-    choice=(enum weekdays)n;
-    if(choice<1||choice>7)
-    printf("Invalid input");
-return o
-switch (choice)
-case MONDAY:
-printf("MONDAY");
-break;
-case TUESDAY:
-printf("TUESDAY");
-break;
-case WEDNESDAY:
-printf("WEDNESDAY");
-break;
-case THURSDAY:
-printf("THURSDAY");
-break;
-case FRIDAY:
-printf("FRIDAY");
-case SATURDAY:
-printf("SATURDAY");
-break;
-case SUNDAY
-printf("SUNDAY");
-break;
-return 0;
+    int num;
+
+    printf("Enter a number (1-7): ");
+    scanf("%d", &num);
+
+    switch (num)
+    {
+        case MONDAY:
+            printf("Monday\n");
+            break;
+
+        case TUESDAY:
+            printf("Tuesday\n");
+            break;
+
+        case WEDNESDAY:
+            printf("Wednesday\n");
+            break;
+
+        case THURSDAY:
+            printf("Thursday\n");
+            break;
+
+        case FRIDAY:
+            printf("Friday\n");
+            break;
+
+        case SATURDAY:
+            printf("Saturday\n");
+            break;
+
+        case SUNDAY:
+            printf("Sunday\n");
+            break;
+
+        default:
+            printf("Invalid input! Enter a number from 1 to 7.\n");
+    }
+
+    return 0;
 }
